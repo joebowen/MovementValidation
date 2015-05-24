@@ -2,8 +2,6 @@
 
 cd ~/app-root/runtime/repo
 
-git clone https://github.com/joebowen/ChannelWormDjango.git
-
-pwd
+git clone https://github.com/joebowen/MovementValidation.git
 
 cp -r ChannelWormDjango/* ~/app-root/runtime/repo/
