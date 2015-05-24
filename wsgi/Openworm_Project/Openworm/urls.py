@@ -1,3 +1,4 @@
+from django.views.generic import RedirectView
 from django.conf.urls import url, patterns
 from Openworm import views
 
@@ -13,4 +14,6 @@ urlpatterns = patterns('',
     url(r'^api/(?P<name>[\w]+)/(?P<id>[0-9]+)/$', views.RESTListView.as_view(), name='REST API'),
 
     url(r'^init/', views.InitialData, name='Initial Data'),
+
+    url(r'^help/', RedirectView.as_view(url='http://movementvalidation.readthedocs.org/en/latest/_static/index.html'))
 )
