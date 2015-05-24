@@ -23,7 +23,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-TEMPLATE_DIRS = ('templates/',)
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates/'),)
 
 ALLOWED_HOSTS = []
 
@@ -60,29 +60,13 @@ WSGI_APPLICATION = 'Openworm_Project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-if 'RDS_DB_NAME' in os.environ:
-    DATABASES = {
-        'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ['RDS_DB_NAME'],
-        'USER': os.environ['RDS_USERNAME'],
-        'PASSWORD': os.environ['RDS_PASSWORD'],
-        'HOST': os.environ['RDS_HOSTNAME'],
-        'PORT': os.environ['RDS_PORT'],
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        # GETTING-STARTED: change 'db.sqlite3' to your sqlite3 database:
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-else:
-    DATABASES = {
-        'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
-        'USER': 'newuser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-        },
-    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -101,12 +85,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_ROOT = 'static/'
-
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (
-)
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -121,6 +101,3 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
-
-# AWS keys
-AWS_STORAGE_BUCKET_NAME = 'openworm-videos'
