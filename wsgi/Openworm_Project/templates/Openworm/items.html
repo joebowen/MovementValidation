@@ -1,0 +1,74 @@
+{% extends "Openworm/bootstrap_dashboard.html" %}
+
+{% load Openworm_extras %}
+
+{% block title %}{{ Name }}{% endblock %}
+{% block header-title %}
+
+    {% if id != -1 %}
+        <a href="/dashboard/{{ Name }}">
+            {{ Name }}
+        </a>
+         / {{ id }}
+    {% endif %}
+    {% if id == -1 %}
+        <a href="/dashboard/{{ Name }}">
+            {{ Name }}
+        </a>
+    {% endif %}
+{% endblock %}
+
+{% block header-buttons %}
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" onclick="window.location.href='/dashboard/{{ Name }}/{{ obj_count }}/'; return false;">New</button>
+    {% if id != -1 %}
+        <button type="button" class="btn btn-default" onclick="window.location.href='/api/{{ Name }}/{{ id }}'; return false;">Edit</button>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block content %}
+<dl>
+    <dt>
+        <div id="headerBox" style="margin:0px auto; overflow:hidden; width:100%">
+            <div id="headercolumn" style="float:left; margin:0; overflow:hidden; width:{{ col_width }}%;">
+                Link
+            </div>
+        {% with model_list|first as model %}
+            {% for key,item in model.items|sort %}
+                {% if key != "id" %}
+                    <div id="column{{ key }}" style="float:left; margin:0; overflow:hidden; width:{{ col_width }}%;">
+                        {{ key }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+        </div>
+    </dt>
+
+    {% for model in model_list %}
+    <dt>
+        <div id="contentBox" style="margin:0px auto; overflow:hidden; width:100%">
+            <div id="tablecolumn" style="float:left; margin:0px auto; overflow:hidden; width:{{ col_width }}%;">
+                {% if id == -1 %}
+                    <a href="/dashboard/{{ Name }}/{{ model.id }}">
+                        {{ model.name }}
+                    </a>
+                {% else %}
+                    <a href="/api/{{ Name }}/{{ model.id }}">
+                        {{ model.name }}
+                    </a>
+                {% endif %}
+            </div>
+            {% for key,item in model.items|sort %}
+                {% if key != "id" %}
+                    <div id="tablecolumn{{ key }}" style="float:left; margin:0px auto; min-height: 1px; overflow:hidden; width:{{ col_width }}%;">
+                        {{ item }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </dt>
+    {% endfor %}
+</dl>
+{% endblock %}
