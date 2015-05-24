@@ -1,5 +1,5 @@
 Openworm/views.py
 =================
 
-.. automodule:: Openworm_Project.Openworm.views
+.. automodule:: Openworm.views
     :members:

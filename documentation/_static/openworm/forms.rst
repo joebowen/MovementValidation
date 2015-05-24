@@ -1,5 +1,5 @@
 Openworm/forms.py
 =================
 
-.. automodule:: Openworm_Project.Openworm.forms
+.. automodule:: Openworm.forms
     :members:

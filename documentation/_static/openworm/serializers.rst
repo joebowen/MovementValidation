@@ -1,5 +1,5 @@
 Openworm/serializers.py
 =======================
 
-.. automodule:: Openworm_Project.Openworm.serializers
+.. automodule:: Openworm.serializers
     :members:

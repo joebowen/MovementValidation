@@ -1,5 +1,5 @@
 Openworm/tests.py
 =================
 
-.. automodule:: Openworm_Project.Openworm.tests
+.. automodule:: Openworm.tests
     :members:
