@@ -6,4 +6,5 @@
 
 # Activate VirtualEnv in order to use the correct libraries
 
+cd ~/app-root/runtime/repo/
 pip install  -r 'requirements.txt'
