@@ -1,4 +1,4 @@
-Openworm\settings.py
+Openworm/settings.py
 ====================
 
 .. automodule:: Openworm_Project.Openworm.settings

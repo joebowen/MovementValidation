@@ -1,4 +1,4 @@
-Openworm\serializers.py
+Openworm/serializers.py
 =======================
 
 .. automodule:: Openworm_Project.Openworm.serializers

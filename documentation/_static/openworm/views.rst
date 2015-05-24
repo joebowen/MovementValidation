@@ -1,5 +1,5 @@
-Openworm\urls.py
-================
+Openworm/views.py
+=================
 
-.. automodule:: Openworm_Project.Openworm.urls
+.. automodule:: Openworm_Project.Openworm.views
     :members:
