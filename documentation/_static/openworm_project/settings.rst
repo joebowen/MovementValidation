@@ -1,5 +1,5 @@
-Openworm/settings.py
-====================
+Openworm_Project/settings.py
+============================
 
-.. automodule:: Openworm.settings
+.. automodule:: Openworm_Project.settings
     :members:

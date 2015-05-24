@@ -1,5 +1,5 @@
-Openworm/wsgi.py
-================
+Openworm_Project/wsgi.py
+========================
 
-.. automodule:: Openworm.wsgi
+.. automodule:: Openworm_Project.wsgi
     :members:
