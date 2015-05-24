@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Hodgkin Huxley LEMS Tutorial'
+project = u'Movement Validation'
 copyright = u'2014, Joe Bowen'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -181,7 +181,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'HodgkinHuxleyLEMSTutorialdoc'
+htmlhelp_basename = 'MovementValidationdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -201,7 +201,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'HodgkinHuxleyLEMSTutorial.tex', u'Hodgkin Huxley LEMS Tutorial Documentation',
+  ('index', 'MovementValidationdoc.tex', u'Movement Validation Documentation',
    u'Joe Bowen', 'manual'),
 ]
 
@@ -231,7 +231,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'hodgkinhuxleylemstutorial', u'Hodgkin Huxley LEMS Tutorial Documentation',
+    ('index', 'MovementValidationdoc', u'Movement Validation Documentation',
      [u'Joe Bowen'], 1)
 ]
 
@@ -245,8 +245,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'HodgkinHuxleyLEMSTutorial', u'Hodgkin Huxley LEMS Tutorial Documentation',
-   u'Joe Bowen', 'HodgkinHuxleyLEMSTutorial', 'One line description of project.',
+  ('index', 'MovementValidationdoc', u'Movement Validation Documentation',
+   u'Joe Bowen', 'MovementValidationdoc', 'Movement Validation Documentation.',
    'Miscellaneous'),
 ]
 
