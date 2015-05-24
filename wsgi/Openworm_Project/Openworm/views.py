@@ -7,7 +7,6 @@ from django.shortcuts import render_to_response
 from boto.s3.connection import S3Connection
 from boto.s3.key import Key
 from django.template import RequestContext
-from Openworm_Project.settings import AWS_STORAGE_BUCKET_NAME
 import time
 import re
 from models import Plate, Lab, Experimenter, Strain, Worm, Wormlist
