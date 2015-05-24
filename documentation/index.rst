@@ -14,8 +14,7 @@ Overview:
 .. toctree::
    :maxdepth: 4
 
-   _static/Tutorial
-   _static/Source
+   _static/index
 
 Indices and tables
 ==================
